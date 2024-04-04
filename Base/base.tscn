@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3vm3qxw1uar7"]
+
+[ext_resource type="Script" path="res://Base/base.gd" id="1_3ms6x"]
+[ext_resource type="FontFile" uid="uid://ciisp4puvqwo" path="res://Assets/Asap/static/Asap-Bold.ttf" id="2_67kc5"]
+[ext_resource type="PackedScene" uid="uid://dn5yroqcxlr57" path="res://Assets/Base.glb" id="2_lk4bq"]
+
+[node name="Base" type="Node3D" groups=["base"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -6)
+script = ExtResource("1_3ms6x")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+billboard = 1
+text = "health goes here
+"
+font = ExtResource("2_67kc5")
+font_size = 500
+outline_size = 100
+
+[node name="Base" parent="." instance=ExtResource("2_lk4bq")]
